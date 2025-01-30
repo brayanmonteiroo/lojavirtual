@@ -1,0 +1,8 @@
+# Ativa o mecanismo de reescrita de URLs no servidor Apache.
+RewriteEngine On
+
+# Verifica se a solicitação não começa com '/public/' para evitar redirecionamento infinito.
+RewriteCond %{REQUEST_URI} !^/public/
+
+# Redireciona todas as solicitações para a pasta 'public', mantendo o restante da URL.
+RewriteRule ^(.*)$ public/$1 [L]
