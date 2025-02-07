@@ -4,7 +4,7 @@ namespace app\Controllers;
 
 class HomeController
 {
-    public function home(): void
+    public function index(): void
     {
         echo 'Estou na controller Home!';
     }

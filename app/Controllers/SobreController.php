@@ -4,7 +4,7 @@ namespace app\Controllers;
 
 class SobreController
 {
-    public function sobre(): void
+    public function index(): void
     {
         echo 'Estou na controller SOBRE!';
     }
