@@ -2,12 +2,6 @@
 
 namespace app\Core;
 
-include '../app/Controllers/SobreController.php';
-include '../app/Controllers/HomeController.php';
-include '../app/Controllers/CategoriaController.php';
-
-
-
 class Rota
 {
     private array $url = [];

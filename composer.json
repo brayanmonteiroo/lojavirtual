@@ -1,0 +1,15 @@
+{
+    "name": "brayan/lojavirtual",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Brayan Monteiro",
+            "email": "brayanmonteirooo@gmail.com"
+        }
+    ],
+    "require": {}
+}
