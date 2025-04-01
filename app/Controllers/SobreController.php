@@ -2,10 +2,14 @@
 
 namespace app\Controllers;
 
+use app\Core\View;
+
 class SobreController
 {
     public function index(): void
     {
-        echo 'Estou na controller SOBRE!';
+        View::render('site/sobre', [
+            'title' => 'Página Sobre'
+        ]);
     }
 }

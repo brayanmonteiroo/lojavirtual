@@ -2,10 +2,12 @@
 
 namespace app\Controllers;
 
+use app\Core\View;
+
 class HomeController
 {
     public function index(): void
     {
-        echo 'Estou na controller Home!';
+        View::render('site/home', []);
     }
 }
