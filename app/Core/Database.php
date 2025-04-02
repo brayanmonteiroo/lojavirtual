@@ -18,11 +18,11 @@ class Database
     {
         if(self::$conexao === null){
             try {
-                $host = 'localhost';
-                $banco = 'lojavirtual';
-                $usuario = 'root';
-                $senha = '';
-                $charset = 'utf8mb4';
+                $host = getenv('DB_HOST');
+                $banco = getenv('DB_NAME');
+                $usuario = getenv('DB_USER');
+                $senha = getenv('DB_PASS');
+                $charset = getenv('DB_CHARSET');
 
                 $dsn = "mysql:host=$host;dbname=$banco;charset=$charset";
 
