@@ -15,7 +15,7 @@
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-white">Termos de Uso</a></li>
                         <li><a href="#" class="text-white">Política de Privacidade</a></li>
-                        <li><a href="#" class="text-white">Sobre Nós</a></li>
+                        <li><a href="#" class="text-white">Sobre</a></li>
                         <li><a href="#" class="text-white">Contato</a></li>
                     </ul>
                 </div>
