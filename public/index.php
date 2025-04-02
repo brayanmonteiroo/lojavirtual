@@ -7,10 +7,10 @@ include_once '../app/Core/Rota.php';
 use app\Core\Env;
 $env = Env::load();
 
-// use app\Core\Rota;
+use app\Core\Rota;
 
-// $rota = new Rota();
+$rota = new Rota();
 
 use app\Core\Database;
 
-$conn = Database::getConexao();
+//$conn = Database::getConexao();
