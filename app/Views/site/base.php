@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titulo</title>
+    <link rel="stylesheet" href="public/assets/css/site.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
     <?php include 'topo.php'?>
@@ -12,5 +14,6 @@
 
     <?php include 'rodape.php'?>
 
+    <script src="public/assets/js/site.js"></script>
 </body>
 </html>
