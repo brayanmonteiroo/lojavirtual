@@ -95,4 +95,45 @@ CREATE INDEX idx_item_venda_venda ON item_venda(venda_id);
 CREATE INDEX idx_item_venda_produto ON item_venda(produto_id);
 CREATE INDEX idx_carrinho_usuario ON carrinho(usuario_id);
 CREATE INDEX idx_carrinho_produto ON carrinho(produto_id);
+
+-- Inserção de dados
+INSERT INTO usuario (nome, cpf, email, senha, nascimento, ativo) VALUES
+('João Silva', '123.456.789-01', 'joao@email.com', 'senha123', '1990-05-15', TRUE),
+('Maria Oliveira', '987.654.321-00', 'maria@email.com', 'senha456', '1992-08-22', TRUE),
+('Carlos Souza', '111.222.333-44', 'carlos@email.com', 'senha789', '1985-03-10', TRUE),
+('Ana Lima', '555.666.777-88', 'ana@email.com', 'senha000', '1998-12-01', TRUE),
+('Pedro Rocha', '999.888.777-66', 'pedro@email.com', 'senhaabc', '1991-07-30', TRUE);
+
+INSERT INTO categoria (nome, descricao, status) VALUES
+('Eletrônicos', 'Produtos eletrônicos em geral', 'ativo'),
+('Roupas', 'Vestimentas masculinas e femininas', 'ativo'),
+('Calçados', 'Sapatos, tênis e botas', 'ativo'),
+('Acessórios', 'Relógios, cintos e bolsas', 'ativo'),
+('Esporte', 'Equipamentos e roupas esportivas', 'ativo');
+
+INSERT INTO produto (categoria_id, nome, descricao, preco, estoque, status) VALUES
+(1, 'Smartphone', 'Smartphone topo de linha', 2999.99, 50, 'disponivel'),
+(2, 'Camiseta', 'Camiseta 100% algodão', 49.99, 200, 'disponivel'),
+(3, 'Tênis Esportivo', 'Tênis de corrida', 199.99, 80, 'disponivel'),
+(4, 'Relógio de Pulso', 'Relógio analógico masculino', 129.99, 60, 'disponivel'),
+(5, 'Mochila', 'Mochila resistente para viagem', 259.99, 40, 'disponivel');
+
+INSERT INTO endereco (usuario_id, tipo, cep, logradouro, numero, complemento, bairro, cidade, estado) VALUES
+(1, 'residencial', '01001-000', 'Rua A', '123', 'Apto 101', 'Centro', 'São Paulo', 'SP'),
+(2, 'comercial', '02002-000', 'Av. B', '456', NULL, 'Bairro B', 'Rio de Janeiro', 'RJ');
+
+INSERT INTO venda (usuario_id, endereco_id, total, forma_pagamento, status_pagamento, status_venda) VALUES
+(1, 1, 2999.99, 'cartao', 'pago', 'processando'),
+(2, 2, 49.99, 'pix', 'pendente', 'processando');
+
+INSERT INTO item_venda (venda_id, produto_id, quantidade, preco_unitario) VALUES
+(1, 1, 1, 2999.99),
+(2, 2, 1, 49.99);
+
+INSERT INTO carrinho (usuario_id, produto_id, quantidade) VALUES
+(1, 2, 2),
+(2, 1, 1),
+(3, 3, 1),
+(4, 4, 1),
+(5, 5, 1);
 ```
