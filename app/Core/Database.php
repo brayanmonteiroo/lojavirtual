@@ -30,7 +30,6 @@ class Database {
                 ];
 
                 self::$conexao = new PDO($dsn, $usuario, $senha, $options);
-                echo 'Conexão ok';
             } catch (PDOException $ex) {
                 throw new PDOException("Erro conexão: " . $ex);
             }
